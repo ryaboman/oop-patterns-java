@@ -15,19 +15,19 @@ public class HTMLReport implements Report {
     public void generateReport() {
         StringBuilder report = new StringBuilder();
         report.append("<html>\n");
-        report.append("<head>\n");
-        report.append("<style>\n");
-        report.append("body {\n");
-        report.append("}\n");
-        report.append("</style>\n");
-        report.append("</head>\n");
-        report.append("<body>\n");
+        report.append("\t<head>\n");
+        report.append("\t\t<style>\n");
+        report.append("\t\tbody {\n");
+        report.append("\t\t}\n");
+        report.append("\t\t</style>\n");
+        report.append("\t</head>\n");
+        report.append("\t<body>\n");
         for (String row : rows) {
-            report.append("<h1>");
+            report.append("\t\t<h1>");
             report.append(row);
             report.append("</h1>\n");
         }
-        report.append("</body>\n");
+        report.append("\t</body>\n");
         report.append("</html>\n");
         html = report.toString();
     }
